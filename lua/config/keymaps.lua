@@ -8,6 +8,10 @@ map("n", "<C-k>", "<C-w>k", { desc = "Go to Upper Window" })
 map("n", "<C-l>", "<C-w>l", { desc = "Go to Right Window" })
 map("n", "<C-q>", "<C-w>q", { desc = "Close Buffer" })
 
+-- Move selected lines down and up in visual mode
+map("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move selected text down" })
+map("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selected text up" })
+
 -- Don't loose selection
 map("v", "<", "<gv")
 map("v", ">", ">gv")

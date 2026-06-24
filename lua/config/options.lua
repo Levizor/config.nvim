@@ -5,6 +5,8 @@ vim.g.netrw_hide = 1
 
 local opt = vim.opt
 
+opt.showmode = true
+opt.showcmd = true
 opt.number = true              -- Show line numbers
 opt.relativenumber = true      -- Show relative line numbers 
 opt.numberwidth = 2            -- Min number of columns used for numbers

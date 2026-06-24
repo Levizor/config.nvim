@@ -1,6 +1,9 @@
 return {
 	"stevearc/conform.nvim",
 	cmd = { "ConformInfo" },
+	keys = {
+		{ "<leader>cf", "<cmd>ConformInfo<CR>", { desc = "ConformInfo" } },
+	},
 	opts = {
 		format_on_save = {
 			timeout_ms = 500,
@@ -12,10 +15,10 @@ return {
 			python = { "ruff" },
 			nix = { "nixfmt" },
 			typst = { "typstyle" },
+			bash = { "shfmt" },
+			kotlin = { "ktlint" },
+			c = { "clang-format" },
+			rust = { "rustfmt" },
 		},
 	},
-
-	config = function()
-		vim.keymap.set("n", "<leader>cf", "<cmd>ConformInfo<CR>", { desc = "ConformInfo" })
-	end,
 }
