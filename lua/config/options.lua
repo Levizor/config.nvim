@@ -16,7 +16,7 @@ opt.tabstop = 2                -- Number of spaces a tab counts for
 opt.shiftwidth = 2             -- Number of spaces for auto-indent
 opt.softtabstop = 2            -- Moving cursor instead of writing tab in insert mode
 opt.expandtab = true           -- Convert tabs to spaces
-opt.smartindent = true         -- Make indenting smart
+opt.smartindent = false        -- Disable smart indenting
 opt.autoindent = true
 
 opt.ignorecase = true          -- Ignore case when searching...
