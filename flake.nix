@@ -23,6 +23,7 @@
           pkgs = import nixpkgs { inherit system; };
 
           runtimeDeps = with pkgs; [
+            tree-sitter
             curl
             fd
             gcc
@@ -40,6 +41,7 @@
             util-linux
             wget
             zlib
+            (vimPlugins.nvim-treesitter.withPlugins (p: [p.lua p.nix p.python]))
           ];
 
           binPath = pkgs.lib.makeBinPath runtimeDeps;
