@@ -1,6 +1,7 @@
 local map = vim.keymap.set
 
-map("n", "<Esc", "<cmd>nohlsearch<CR>", { desc = "Clear search highlights" })
+map("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlights" })
+map("n", "<leader>lz", "<cmd>Lazy<cr>", {desc = "Lazy"})
 
 map("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window" })
 map("n", "<C-j>", "<C-w>j", { desc = "Go to Lower Window" })
