@@ -47,3 +47,20 @@ opt.swapfile = false           -- Do not use swap file
 -- opt.background = 
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+
+vim.diagnostic.config({
+  float = {
+    border = vim.g.boarder, -- Uses your global "single" configuration truth
+    focusable = true,           -- Prevents your cursor from accidentally entering the popup
+    header = "",                 -- Disables the noisy default "Diagnostics:" title string
+    prefix = function(diagnostic, i, total)
+      local icon = " "
+      if diagnostic.severity == vim.diagnostic.severity.ERROR then
+        icon = " "
+      elseif diagnostic.severity == vim.diagnostic.severity.WARN then
+        icon = " "
+      end
+      return icon .. " ", "DiagnosticSign" .. diagnostic.severity
+    end,
+  },
+})

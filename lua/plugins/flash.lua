@@ -30,8 +30,8 @@ return {
 			keys = "etovxqpdygfblzhckisuran",
 		},
     keys = {
-      {"<c-x>", "<cmd>HopWord<cr>", {desc = "HopWord"}},
-      {"<c-l>", "<cmd>HopLine<cr>", {desc = "HopWord"}},
+      {"<leader>hw", "<cmd>HopWord<cr>", {desc = "HopWord"}},
+      {"<leader>hl", "<cmd>HopWord<cr>", {desc = "HopWord"}},
     },
 		config = function(_, opts)
 			local hop = require("hop").setup(opts)
