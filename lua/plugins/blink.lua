@@ -45,7 +45,7 @@ return {
     },
 
     -- (Default) Only show the documentation popup when manually triggered
-    completion = { documentation = { auto_show = true } },
+    completion = { documentation = { auto_show = true }, menu = { border = vim.g.border }},
 
 
 

@@ -26,13 +26,13 @@ return {
             {
               box = "vertical",
               box_grow = true,
-              { win = "input", height = 1, border = "none", title = "{title} {badge}" },
-              { win = "list",  border = "none" },
+              { win = "input", height = 1, border = vim.g.border, title = "{title} {badge}" },
+              { win = "list",  border = vim.g.border },
             },
             {
               win = "preview",
               title = " Preview ",
-              border = "none",
+              border = vim.g.border,
               width = 0.6875,
             },
           },
@@ -46,7 +46,7 @@ return {
     words = { enabled = true },
     image = {
       enabled = true,
-      border = "none",
+      border = vim.g.border,
       doc = {
         inline = false,
         max_width = 60,
@@ -71,7 +71,7 @@ return {
     -- { "<leader>e", function() Snacks.explorer() end, desc = "File Explorer" },
     -- find
     { "<leader>fb",      function() Snacks.picker.buffers() end,                                 desc = "Buffers" },
-    { "<leader>fc",      function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end, desc = "Find Config File" },
+    { "<leader>fc",      function() Snacks.picker.files({ cwd = vim.fn.stdpath("config"), args = {"--type", "f", "--type", "d", "--hidden", "--exclude", ".git"}}) end, desc = "Find Config File" },
     { "<leader>ff", function() Snacks.picker.files({args = {"--type", "f", "--type", "d", "--hidden", "--exclude", ".git"}}) end, desc = "Find Files" },
     { "<leader>fg",      function() Snacks.picker.git_files() end,                               desc = "Find Git Files" },
     { "<leader>fp",      function() Snacks.picker.projects() end,                                desc = "Projects" },

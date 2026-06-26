@@ -1,5 +1,6 @@
 return {
-  "stevearc/oil.nvim",
+  "Levizor/oil.nvim",
+  -- dir = "~/Projects/oil.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
     require("oil").setup({
@@ -15,11 +16,12 @@ return {
         padding = 0,
         max_width = 0,
         max_height = 0,
-        border = "none",
+        border = vim.g.border,
         preview_split = "right",
       },
 
       preview_win = {
+        preview_size = 0.6875,
         update_on_cursor_moved = true,
         win_options = {
           signcolumn = "yes:1",
@@ -37,6 +39,6 @@ return {
 
     })
 
-    vim.keymap.set("n", "e", function() require("oil").toggle_float(nil, {preview = {vertical = true}}) end, { desc = "Open parent directory in Oil" })
+    vim.keymap.set("n", "e", function() require("oil").toggle_float(nil, {preview = {}}) end, { desc = "Open parent directory in Oil" })
   end,
 }

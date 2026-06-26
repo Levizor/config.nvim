@@ -2,6 +2,7 @@
 vim.g.netrw_banner = 0 -- Don't show netrw banner
 vim.g.netrw_list_hide = [[^\.\.\/\=$,^\.\/\=$]] -- Hide ../ and ./
 vim.g.netrw_hide = 1
+vim.g.border = "single"
 
 local opt = vim.opt
 

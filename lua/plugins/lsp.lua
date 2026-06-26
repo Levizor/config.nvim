@@ -7,7 +7,7 @@ return {
 			{ "gr", vim.lsp.buf.references, "Go to References" },
 			{ "K", vim.lsp.buf.hover, "Hover Documentation" },
 			{ "<leader>ca", vim.lsp.buf.code_action, "Code Action" },
-			{ "<leader>cr", vim.lsp.buf.rename, "Rename Symbol" },
+			-- { "<leader>cr", vim.lsp.buf.rename, "Rename Symbol" },
 			{ "<leader>li", "<cmd>checkhealth vim.lsp<CR>", "Check LSP health" },
 			{ "<leader>lr", "<cmd>lsp restart<CR>", "Check LSP health" },
 			{ "<leader>ld", "<cmd>lsp disable<CR>", "Disable LSP" },
@@ -19,7 +19,7 @@ return {
 		"mason-org/mason.nvim",
 		opts = {
 			ui = {
-				border = "rounded",
+				border = vim.g.border,
 			},
 		},
 
